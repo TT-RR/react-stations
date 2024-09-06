@@ -10,7 +10,14 @@ export const App = () => {
   let [dogUrl, setdogUrl] = useState('https://images.dog.ceo/breeds/terrier-westhighland/n02098286_4120.jpg');
 
   function upDatedogUrl() {
-    setdogUrl('https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg');
+    fetch("https://dog.ceo/api/breeds/image/random")
+      .then((response) => response.json())
+      .then((data) => {
+        setdogUrl(data.message);
+      })
+      .catch((error) => {
+        console.error('エラー:', error);
+      })
   }
 
   return (
