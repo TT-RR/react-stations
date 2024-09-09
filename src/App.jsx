@@ -13,6 +13,7 @@ export const App = () => {
     <>
       <Header />
       <Description />
+      <hr />
       <DogListContainer />
     </>
   )

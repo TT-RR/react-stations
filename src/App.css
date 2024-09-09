@@ -26,14 +26,17 @@ body {
     color: white;
     width: 100px;
     height: 30px;
+    align-self: center;
 }
 
 .btn-container {
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
 
 .breedsList {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -43,4 +46,19 @@ select {
     width: 200px;
     height: 30px;
     align-self: center;
+}
+
+.imagesContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.breedList {
+    list-style: none;
+}
+
+.selectBreedImage {
+    max-width: 400px;
+    max-height: 300px;
 }

@@ -1,6 +1,6 @@
 export const BreedsSelect = ({ breeds, selectedBreed, changBreed }) => {
   return (
-    <div className="breedsList">
+    <>
       <p>犬種を選択：</p>
       <select value={selectedBreed} onChange={changBreed}>
         <option value=""></option>
@@ -10,7 +10,7 @@ export const BreedsSelect = ({ breeds, selectedBreed, changBreed }) => {
           </option>
         ))}
       </select>
-    </div>
+    </>
   )
 }
 
