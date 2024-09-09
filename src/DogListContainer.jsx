@@ -1,8 +1,9 @@
-// @ts-check
 import { useState, useEffect } from 'react'
+import { BreedsSelect } from './BreedsSelect'
 
 export const DogListContainer = () => {
   const [breeds, setBreeds] = useState([""]);
+  const [selectedBreed, setSelectedBreed] = useState("");
 
   useEffect(() => {
     fetch("https://dog.ceo/api/breeds/list/all")
@@ -16,9 +17,21 @@ export const DogListContainer = () => {
       })
   }, []);
 
-  console.log(breeds)
+  const changBreed = (event) => {
+    setSelectedBreed(event.target.value)
+  }
 
-  return <></>
+  // console.log(breeds)
+  console.log(selectedBreed)
+
+  return (
+    <>
+      <BreedsSelect
+        breeds={breeds}
+        selectedBreed={selectedBreed}
+        changBreed={changBreed} />
+    </>
+  )
 }
 
 export default DogListContainer
